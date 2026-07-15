@@ -12,19 +12,32 @@
     <div class="container">
         <h1>🌡 Temperature Converter</h1>
         <input type="number" id="temperature" placeholder="Enter Temperature">
-        <select  id="unit">
-            <option value="c">Celsius</option>
-            <option value="f">Fahrenheit</option>
-            <option value="k">Kelvin</option>
-        </select>
+        <div class="select-row">
+            <label>
+                From
+                <select id="fromUnit">
+                    <option value="c">Celsius</option>
+                    <option value="f">Fahrenheit</option>
+                    <option value="k">Kelvin</option>
+                    <option value="r">Rankine</option>
+                </select>
+            </label>
+            <label>
+                To
+                <select id="toUnit">
+                    <option value="c">Celsius</option>
+                    <option value="f">Fahrenheit</option>
+                    <option value="k">Kelvin</option>
+                    <option value="r">Rankine</option>
+                </select>
+            </label>
+        </div>
 
-        <button onclick="convertTemp()">
+        <button type="button" id="convertBtn">
+            Convert
+        </button>
 
-Convert
-
-</button>
-
-<p id="error"></p>
+        <p id="error"></p>
 
 <div class="result">
 
@@ -33,6 +46,8 @@ Convert
 <p id="fahrenheit"></p>
 
 <p id="kelvin"></p>
+
+<p id="rankine"></p>
 </div>
        
     </div>
